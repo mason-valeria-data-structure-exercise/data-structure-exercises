@@ -1,4 +1,3 @@
-// Comment for push
 import java.util.HashMap;
 import util.Input;
 
