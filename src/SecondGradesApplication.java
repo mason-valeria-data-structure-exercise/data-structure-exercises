@@ -48,6 +48,8 @@ public class SecondGradesApplication {
             System.out.printf(" |%s| ", key);
         });
 
+
+
         HashMap<String, String> usernames = new HashMap<>();
         boolean loopLogic = true;
         while (loopLogic){
@@ -65,11 +67,11 @@ public class SecondGradesApplication {
             } else {
                 System.out.println("Sorry, no student found with the GitHub username of " + userInput);
             }
-            System.out.println("Do you want to continue? (y/n)");
+            System.out.println("Do you want to see another student's grades? (y/n)");
             userInput = scanner.nextLine();
             if (userInput.equalsIgnoreCase("n") || userInput.equalsIgnoreCase("no")){
                 System.out.println("Would you like to view the classroom grades? (y/n)");
-                userInput = scanner.next();
+                userInput = scanner.nextLine();
                 if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")){
                     List<Object> allGrades = Arrays.asList(mason.getGrades(), danny.getGrades(), aaron.getGrades(), david.getGrades());
                     List<Object> allNames = Arrays.asList(mason.getName(), danny.getName(), aaron.getName(), david.getName());
@@ -77,8 +79,31 @@ public class SecondGradesApplication {
                         System.out.printf("%s's Grades: %s%n", allNames.get(i), allGrades.get(i));
                     }
                 }
-                System.out.println("Would you like to see the class average?");
-                System.out.println();
+//                System.out.println("Would you like to see the class average?");
+                System.out.println("\nWould you like to see the class average? (y/n)");
+                userInput = scanner.nextLine();
+
+                if (userInput.equals("y")){
+                    double sum = 0;
+                    List<Double> allAvg = Arrays.asList(mason.getGradeAverage(), danny.getGradeAverage(), aaron.getGradeAverage(), david.getGradeAverage());
+                    for(int i = 0; i < allAvg.size();i++){
+                        sum += allAvg.get(i);
+                    }
+                    sum = sum / allAvg.size();
+                    System.out.printf("The class average is: %.2f%n", sum);
+                    System.out.print("Wanna start over?? Please for the love of everything Holy, say no you obtuse consumer...\n");
+                    userInput = scanner.nextLine();
+//                    String ghostInput = scanner.next();
+                    if (userInput.equalsIgnoreCase("n") || userInput.equalsIgnoreCase("no")){
+                        System.out.println("Later Skater!");
+                        loopLogic = false;
+                        break;
+                } else if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")){
+//                    System.out.println("Later Skater! ");
+                    loopLogic = true;
+                }
+                    }
+
 
 
             } // end If

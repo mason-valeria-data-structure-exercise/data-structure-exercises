@@ -60,8 +60,8 @@ public class GradesApplication {
             System.out.println("\nWhat student would you like to see more information on?");
             //System.out.println(studentHashMap.keySet());
             String userInput = scanner.nextLine();
-                Student selectedStudent = studentHashMap.get(userInput);
             boolean userInputYes = userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
+                Student selectedStudent = studentHashMap.get(userInput);
             if (studentHashMap.containsKey(userInput)) {
 
                 System.out.printf("Name: %s - GitHub username: %s%n Current Average: %.2f%n", selectedStudent.getName(), userInput, selectedStudent.getGradeAverage());
