@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 
 public class Student {
@@ -62,6 +63,18 @@ public class Student {
 
         return (double) total / grades.size();
     }
+
+
+
+    protected double getClassAverage(HashMap<String, Student> classSize){
+        int total = 0;
+        for (int i = 0; i < classSize.size(); i++){
+            total += classSize.get(i).getGradeAverage();
+
+        }
+        return (double) total / classSize.size();
+    }
+
 }
 
 //this is my comment
