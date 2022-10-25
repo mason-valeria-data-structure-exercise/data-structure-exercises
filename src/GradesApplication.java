@@ -78,6 +78,7 @@ public class GradesApplication {
             if (!userInputYes){
                 System.out.println("Would you like to view the classroom grades? (y/n)");
                 userInput = scanner.next();
+
                 if (userInput.equals("y")){
                     List<Object> allGrades = Arrays.asList(mason.getGrades(), danny.getGrades(), aaron.getGrades(), david.getGrades());
                     List<Object> allNames = Arrays.asList(mason.getName(), danny.getName(), aaron.getName(), david.getName());
@@ -89,14 +90,6 @@ public class GradesApplication {
                 }
                 System.out.println("\nWould you like to see the class average?");
                 System.out.println();
-//                if (userInputYes){
-//                    // get average of every individual student
-//                    // add them together
-//                    // divide by the number of students
-//
-//                }
-
-
 
                 //                System.out.println("Later Skater!");
 

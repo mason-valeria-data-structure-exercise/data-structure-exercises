@@ -47,8 +47,6 @@ public class SecondGradesApplication {
         studentHashMap.forEach((key, student) ->{
             System.out.printf(" |%s| ", key);
         });
-//        Scanner scanner = new Scanner(System.in);
-//        Scanner scanner1 = new Scanner(System.in);
 
         HashMap<String, String> usernames = new HashMap<>();
         boolean loopLogic = true;
@@ -81,6 +79,7 @@ public class SecondGradesApplication {
                 }
                 System.out.println("Would you like to see the class average?");
                 System.out.println();
+
 
             } // end If
         }
