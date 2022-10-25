@@ -76,6 +76,3 @@ public class Student {
     }
 
 }
-
-//this is my comment
-//right here
