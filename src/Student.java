@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-public class Student{
+public class Student {
     // // ===================================== Variables/Properties ===================================================
     private String name;
     private ArrayList<Integer> grades;
@@ -17,7 +18,18 @@ public class Student{
         this.grades = new ArrayList<>();
     }
 
+
+
     // ===================================== Important Methods =========================================================
+
+//    public int compare(Student m1, Student m2){
+//        return Integer.compare(m2.getGrades(), m1.getGrades());
+//    }
+
+    public String toString(){
+        return name;
+    }
+
     public String getName() {
         return name;
     }
